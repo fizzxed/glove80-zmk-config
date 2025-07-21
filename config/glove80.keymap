@@ -53,118 +53,6 @@
             flavor = "tap-preferred";
         };
 
-        hrm_left_index: hrm_left_index {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRM_LEFT_INDEX";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <190>;
-            quick-tap-ms = <300>;
-            require-prior-idle-ms = <100>;
-            hold-trigger-key-positions = <55 56 57 74 5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 56 57 58 59 60 61 62 63 72 73 74 75 76 77 78 79 52 53 54 69 70 71>;
-            hold-trigger-on-release;
-        };
-
-        hrm_left_ring: hrm_left_ring {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRM_LEFT_RING";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <240>;
-            quick-tap-ms = <300>;
-            require-prior-idle-ms = <150>;
-            flavor = "tap-preferred";
-            hold-trigger-key-positions = <5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 56 57 58 59 60 61 62 63 72 73 74 75 76 77 78 79 53 54 55 69 70 71 72 73 74 52>;
-            hold-trigger-on-release;
-        };
-
-        hrm_left_mid: hrm_left_mid {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRM_LEFT_MID";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <210>;
-            quick-tap-ms = <300>;
-            require-prior-idle-ms = <150>;
-            flavor = "tap-preferred";
-            hold-trigger-key-positions = <8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 52 53 54 55 56 57 58 59 60 61 62 63 70 71 72 73 74 75 76 77 78 79 5 6 7 69>;
-            hold-trigger-on-release;
-        };
-
-        hrm_left_pinky: hrm_left_pinky {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRM_LEFT_PINKY";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <260>;
-            quick-tap-ms = <300>;
-            require-prior-idle-ms = <150>;
-            flavor = "tap-preferred";
-            hold-trigger-key-positions = <5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 52 53 54 55 56 57 58 59 60 61 62 63 70 71 72 73 74 75 76 77 78 79 69>;
-            hold-trigger-on-release;
-        };
-
-        hrm_right_index: hrm_right_index {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRM_RIGHT_INDEX";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <190>;
-            quick-tap-ms = <300>;
-            require-prior-idle-ms = <100>;
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 52 53 54 55 56 57 64 65 66 67 68 69 70 71 72 73 74>;
-        };
-
-        hrm_right_mid: hrm_right_mid {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRM_RIGHT_MID";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <210>;
-            quick-tap-ms = <300>;
-            require-prior-idle-ms = <150>;
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 52 53 54 55 56 57 64 65 66 67 68 69 70 71 72 73 74>;
-        };
-
-        hrm_right_ring: hrm_right_ring {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRM_RIGHT_RING";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <240>;
-            quick-tap-ms = <300>;
-            require-prior-idle-ms = <150>;
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 52 53 54 55 56 57 64 65 66 67 68 69 70 71 72 73 74>;
-        };
-
-        hrm_right_pinky: hrm_right_pinky {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRM_RIGHT_PINKY";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <260>;
-            quick-tap-ms = <300>;
-            require-prior-idle-ms = <150>;
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 52 53 54 55 56 57 64 65 66 67 68 69 70 71 72 73 74>;
-        };
-
         hm_capsword: hm_capsword {
             compatible = "zmk,behavior-hold-tap";
             label = "HM_CAPSWORD";
@@ -194,6 +82,34 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <300>;
             flavor = "balanced";
+        };
+
+        hrm_left_hand: hrm_left_hand {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM_LEFT_HAND";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 52 53 54 55 56 57 58 59 60 61 62 63 69 70 71 72 73 74 75 76 77 78 79 7 6 5>;
+            hold-trigger-on-release;
+        };
+
+        hrm_right_hand: hrm_right_hand {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM_RIGHT_HAND";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 52 53 54 55 56 57 64 65 66 67 68 69 70 71 72 73 74>;
         };
     };
 
@@ -255,12 +171,12 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1      &kp F2                          &kp F3                     &kp F4                        &kp F5                                                                                                                                                             &kp F6                          &kp F7                          &kp F8                       &kp F9                                    &kp F10
-&kp EQUAL   &kp N1                          &kp N2                     &kp N3                        &kp N4                        &kp N5                                                                                                                       &kp N6  &kp N7                          &kp N8                          &kp N9                       &kp N0                                    &kp MINUS
-&kp TAB     &kp Q                           &kp W                      &kp E                         &kp R                         &hm SPACE T                                                                                                                  &kp Y   &kp U                           &kp I                           &kp O                        &kp P                                     &kp BSLH
-&kp ESC     &hrm_left_pinky LEFT_CONTROL A  &hrm_left_ring LEFT_ALT S  &hrm_left_mid LEFT_COMMAND D  &hrm_left_index LEFT_SHIFT F  &hm ENTER G                                                                                                                  &kp H   &hrm_right_index RIGHT_SHIFT J  &hrm_right_mid RIGHT_COMMAND K  &hrm_right_ring RIGHT_ALT L  &hrm_right_pinky RIGHT_CONTROL SEMICOLON  &kp SQT
-&kp GRAVE   &kp Z                           &kp X                      &kp C                         &kp V                         &kp B        &hm_capsword LSHIFT 0  &kp LEFT_COMMAND  &layer_td  &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &hm_capsword RSHFT 0  &kp N   &kp M                           &kp COMMA                       &kp DOT                      &kp FSLH                                  &kp PG_UP
-&magic 5 0  &kp HOME                        &kp END                    &kp LEFT                      &kp RIGHT                                  &kp BSPC               &kp DELETE        &kp LALT   &kp RALT           &kp RET            &hm_space 3 SPACE             &kp UP                          &kp DOWN                        &kp LBKT                     &kp RBKT                                  &kp PG_DN
+&kp F1      &kp F2                         &kp F3                     &kp F4                         &kp F5                                                                                                                                                            &kp F6                         &kp F7                           &kp F8                       &kp F9                                   &kp F10
+&kp EQUAL   &kp N1                         &kp N2                     &kp N3                         &kp N4                       &kp N5                                                                                                                       &kp N6  &kp N7                         &kp N8                           &kp N9                       &kp N0                                   &kp MINUS
+&kp TAB     &kp Q                          &kp W                      &kp E                          &kp R                        &hm SPACE T                                                                                                                  &kp Y   &kp U                          &kp I                            &kp O                        &kp P                                    &kp BSLH
+&kp ESC     &hrm_left_hand LEFT_CONTROL A  &hrm_left_hand LEFT_ALT S  &hrm_left_hand LEFT_COMMAND D  &hrm_left_hand LEFT_SHIFT F  &hm ENTER G                                                                                                                  &kp H   &hrm_right_hand RIGHT_SHIFT J  &hrm_right_hand RIGHT_COMMAND K  &hrm_right_hand RIGHT_ALT L  &hrm_right_hand RIGHT_CONTROL SEMICOLON  &kp SQT
+&kp GRAVE   &kp Z                          &kp X                      &kp C                          &kp V                        &kp B        &hm_capsword LSHIFT 0  &kp LEFT_COMMAND  &layer_td  &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &hm_capsword RSHFT 0  &kp N   &kp M                          &kp COMMA                        &kp DOT                      &kp FSLH                                 &kp PG_UP
+&magic 5 0  &kp HOME                       &kp END                    &kp LEFT                       &kp RIGHT                                 &kp BSPC               &kp DELETE        &kp LALT   &kp RALT           &kp RET            &hm_space 3 SPACE             &kp UP                         &kp DOWN                         &kp LBKT                     &kp RBKT                                 &kp PG_DN
             >;
         };
 
