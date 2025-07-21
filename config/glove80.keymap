@@ -29,7 +29,7 @@
             label = "LAYER_TAP_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo 3>, <&to 3>;
+            bindings = <&mo 2>, <&to 2>;
         };
 
         magic: magic_hold_tap {
@@ -255,16 +255,16 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1      &kp F2              &kp F3          &kp F4              &kp F5                                                                                                                               &kp F6   &kp F7               &kp F8           &kp F9                       &kp F10
-&kp EQUAL   &kp N1              &kp N2          &kp N3              &kp N4     &kp N5                                                                                                            &kp N6  &kp N7   &kp N8               &kp N9           &kp N0                       &kp MINUS
-&kp TAB     &kp Q               &kp W           &kp E               &kp R      &hm SPACE T                                                                                                       &kp Y   &kp U    &kp I                &kp O            &kp P                        &kp BSLH
-&kp ESC     &hm LEFT_CONTROL A  &hm LEFT_ALT S  &hm LEFT_COMMAND D  &lt 1 F    &hm ENTER G                                                                                                       &kp H   &lt 1 J  &hm RIGHT_COMMAND K  &hm RIGHT_ALT L  &hm RIGHT_CONTROL SEMICOLON  &kp SQT
-&kp GRAVE   &kp Z               &kp X           &kp C               &kp V      &kp B        &hm_capsword LSHIFT 0  &kp LEFT_COMMAND  &layer_td  &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &kp RSHFT  &kp N   &kp M    &kp COMMA            &kp DOT          &kp FSLH                     &kp PG_UP
-&magic 5 0  &kp HOME            &kp END         &kp LEFT            &kp RIGHT               &kp BSPC               &kp DELETE        &kp LALT   &kp RALT           &kp RET            &kp SPACE          &kp UP   &kp DOWN             &kp LBKT         &kp RBKT                     &kp PG_DN
+&kp F1      &kp F2                          &kp F3                     &kp F4                        &kp F5                                                                                                                                                             &kp F6                          &kp F7                          &kp F8                       &kp F9                                    &kp F10
+&kp EQUAL   &kp N1                          &kp N2                     &kp N3                        &kp N4                        &kp N5                                                                                                                       &kp N6  &kp N7                          &kp N8                          &kp N9                       &kp N0                                    &kp MINUS
+&kp TAB     &kp Q                           &kp W                      &kp E                         &kp R                         &hm SPACE T                                                                                                                  &kp Y   &kp U                           &kp I                           &kp O                        &kp P                                     &kp BSLH
+&kp ESC     &hrm_left_pinky LEFT_CONTROL A  &hrm_left_ring LEFT_ALT S  &hrm_left_mid LEFT_COMMAND D  &hrm_left_index LEFT_SHIFT F  &hm ENTER G                                                                                                                  &kp H   &hrm_right_index RIGHT_SHIFT J  &hrm_right_mid RIGHT_COMMAND K  &hrm_right_ring RIGHT_ALT L  &hrm_right_pinky RIGHT_CONTROL SEMICOLON  &kp SQT
+&kp GRAVE   &kp Z                           &kp X                      &kp C                         &kp V                         &kp B        &hm_capsword LSHIFT 0  &kp LEFT_COMMAND  &layer_td  &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &hm_capsword RSHFT 0  &kp N   &kp M                           &kp COMMA                       &kp DOT                      &kp FSLH                                  &kp PG_UP
+&magic 5 0  &kp HOME                        &kp END                    &kp LEFT                      &kp RIGHT                                  &kp BSPC               &kp DELETE        &kp LALT   &kp RALT           &kp RET            &hm_space 3 SPACE             &kp UP                          &kp DOWN                        &kp LBKT                     &kp RBKT                                  &kp PG_DN
             >;
         };
 
-        HOME_MOD_LAYER {
+        HOME_MOD_LAYER_unused {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                                                                          &trans          &trans        &trans     &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans          &trans          &trans        &trans     &trans  &trans
@@ -272,17 +272,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans        &trans     &trans  &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans                  &trans          &trans        &trans     &trans  &trans
-            >;
-        };
-
-        SYMBOL {
-            bindings = <
-&none             &none              &none                 &none                  &none                                                                                    &none          &none        &none       &none      &none
-&kp GRAVE         &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COMMA   &kp PERIOD                                                        &none      &none          &none        &none       &none      &none
-&kp LEFT_BRACKET  &kp EXCL           &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMI    &kp QMARK                                                         &kp GRAVE  &sk RSHIFT     &sk RGUI     &sk RALT    &sk RCTRL  &none
-&kp HASH          &kp CARET          &kp EQUAL             &kp UNDER              &kp DOLLAR  &kp STAR                                                          &kp DQT    &kp BACKSPACE  &kp TAB      &kp SPACE   &kp ENTER  &none
-&kp TILDE         &kp LT             &kp PIPE              &kp MINUS              &kp GT      &kp FSLH    &kp BSLH   &kp PERIOD  &kp STAR  &none  &none  &none  &kp SQT    &kp DEL        &kp LS(TAB)  &kp INSERT  &kp ESC    &none
-&symbol_dotdot    &kp AMPS           &kp SQT               &kp DQT                &kp PLUS                &kp PRCNT  &kp COLON   &kp AT    &none  &none  &none             &none          &none        &none       &none      &none
             >;
         };
 
@@ -294,6 +283,17 @@
 &trans        &none         &kp LEFT    &kp DOWN    &kp RIGHT  &kp PG_UP                                                  &kp PRCNT  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &none
 &trans        &kp K_CMENU   &none       &kp F11     &kp F12    &kp PG_DN  &trans  &trans  &to 0   &trans  &trans  &trans  &kp COMMA  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &trans
 &trans        &kp CAPS      &kp INS     &kp F11     &kp F12               &trans  &trans  &trans  &trans  &trans  &trans             &kp KP_N0   &kp KP_N0     &kp KP_DOT     &kp KP_ENTER     &trans
+            >;
+        };
+
+        SYMBOL {
+            bindings = <
+&none             &none              &none                 &none                  &none                                                                                    &none          &none        &none       &none      &none
+&kp GRAVE         &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COMMA   &kp PERIOD                                                        &none      &none          &none        &none       &none      &none
+&kp LEFT_BRACKET  &kp EXCL           &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMI    &kp QMARK                                                         &kp GRAVE  &sk RSHIFT     &sk RGUI     &sk RALT    &sk RCTRL  &none
+&kp HASH          &kp CARET          &kp EQUAL             &kp UNDER              &kp DOLLAR  &kp STAR                                                          &kp DQT    &kp BACKSPACE  &kp TAB      &kp SPACE   &kp ENTER  &none
+&kp TILDE         &kp LT             &kp PIPE              &kp MINUS              &kp GT      &kp FSLH    &kp BSLH   &kp PERIOD  &kp STAR  &none  &none  &none  &kp SQT    &kp DEL        &kp LS(TAB)  &kp INSERT  &kp ESC    &none
+&symbol_dotdot    &kp AMPS           &kp SQT               &kp DQT                &kp PLUS                &kp PRCNT  &kp COLON   &kp AT    &none  &none  &none             &none          &none        &none       &none      &none
             >;
         };
 
