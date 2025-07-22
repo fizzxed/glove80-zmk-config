@@ -29,7 +29,7 @@
             label = "LAYER_TAP_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo 2>, <&to 2>;
+            bindings = <&mo 1>, <&to 1>;
         };
 
         magic: magic_hold_tap {
@@ -158,6 +158,16 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        gaming_layer_toggle {
+            bindings = <&tog 3>;
+            key-positions = <68 51>;
+            timeout-ms = <50>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -176,18 +186,7 @@
 &kp TAB     &kp Q                          &kp W                      &kp E                          &kp R                        &hm SPACE T                                                                                                                  &kp Y   &kp U                          &kp I                            &kp O                        &kp P                                    &kp BSLH
 &kp ESC     &hrm_left_hand LEFT_CONTROL A  &hrm_left_hand LEFT_ALT S  &hrm_left_hand LEFT_COMMAND D  &hrm_left_hand LEFT_SHIFT F  &hm ENTER G                                                                                                                  &kp H   &hrm_right_hand RIGHT_SHIFT J  &hrm_right_hand RIGHT_COMMAND K  &hrm_right_hand RIGHT_ALT L  &hrm_right_hand RIGHT_CONTROL SEMICOLON  &kp SQT
 &kp GRAVE   &kp Z                          &kp X                      &kp C                          &kp V                        &kp B        &hm_capsword LSHIFT 0  &kp LEFT_COMMAND  &layer_td  &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &hm_capsword RSHFT 0  &kp N   &kp M                          &kp COMMA                        &kp DOT                      &kp FSLH                                 &kp PG_UP
-&magic 5 0  &kp HOME                       &kp END                    &kp LEFT                       &kp RIGHT                                 &kp BSPC               &kp DELETE        &kp LALT   &kp RALT           &kp RET            &hm_space 3 SPACE             &kp UP                         &kp DOWN                         &kp LBKT                     &kp RBKT                                 &kp PG_DN
-            >;
-        };
-
-        HOME_MOD_LAYER_unused {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                          &trans          &trans        &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans          &trans          &trans        &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans          &trans          &trans        &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans        &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans                  &trans          &trans        &trans     &trans  &trans
+&magic 4 0  &kp HOME                       &kp END                    &kp LEFT                       &kp RIGHT                                 &kp BSPC               &kp DELETE        &kp LALT   &kp RALT           &kp RET            &hm_space 2 SPACE             &kp UP                         &kp DOWN                         &kp LBKT                     &kp RBKT                                 &kp PG_DN
             >;
         };
 
@@ -215,12 +214,12 @@
 
         GAMING_LAYER {
             bindings = <
-&none  &none             &none         &none           &none                                                                                            &none           &none         &none         &none         &none
-&none  &none             &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3  &kp NUMBER_4                                                         &kp NUMBER_5  &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-&none  &kp TAB           &kp Q         &kp W           &kp E         &kp R                                                                &none         &none           &kp UP_ARROW  &none         &none         &none
-&none  &kp CAPS          &kp A         &kp S           &kp D         &kp F                                                                &none         &kp LEFT_ARROW  &kp DOWN      &kp RIGHT     &none         &none
-&none  &kp LEFT_SHIFT    &kp Z         &kp X           &kp C         &kp V         &none      &none           &to 0  &to 0  &none  &none  &none         &none           &none         &none         &none         &none
-&none  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_ARROW  &kp RIGHT                   &kp SPACE  &kp LEFT_SHIFT  &none  &none  &none  &none                &none           &none         &none         &none         &to 0
+&kp ESCAPE  &kp P             &kp O         &kp N         &kp BACKSPACE                                                                                                   &kp F1     &kp F2            &kp F3             &kp F4         &kp F5
+&kp M       &kp NUMBER_6      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9   &kp NUMBER_0                                                                             &kp F6  &kp F7     &kp F8            &kp F9             &kp F10        &kp F11
+&kp I       &kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5                                                                             &kp Y   &kp U      &kp I             &kp O              &kp P          &kp F12
+&kp T       &kp TAB           &kp Q         &kp W         &kp E          &kp R                                                                                    &kp H   &kp J      &kp K             &kp L              &kp SEMICOLON  &kp SQT
+&kp G       &kp LEFT_SHIFT    &kp A         &kp S         &kp D          &kp F         &kp LEFT_SHIFT  &kp LALT   &kp V      &kp ESCAPE  &kp UP_ARROW  &kp ENTER  &kp N   &kp M      &kp COMMA         &kp PERIOD         &kp SLASH      &kp MINUS
+&kp B       &kp LEFT_CONTROL  &kp Z         &kp X         &kp C                        &kp SPACE       &kp LCTRL  &kp ENTER  &kp LEFT    &kp DOWN      &kp RIGHT          &kp GRAVE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp EQUAL
             >;
         };
 
@@ -231,7 +230,7 @@
 &none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                   &none  &none  &none  &none  &none  &none
 &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                   &none  &none  &none  &none  &none  &bootloader
 &sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none         &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset
-&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB  &none  &none  &none         &none  &none  &none  &none  &to 4
+&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB  &none  &none  &none         &none  &none  &none  &none  &none
             >;
         };
     };
