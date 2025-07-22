@@ -162,7 +162,7 @@
         compatible = "zmk,combos";
 
         gaming_layer_toggle {
-            bindings = <&tog 3>;
+            bindings = <&tog 4>;
             key-positions = <68 51>;
             timeout-ms = <50>;
         };
@@ -181,12 +181,12 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1      &kp F2                         &kp F3                     &kp F4                         &kp F5                                                                                                                                                            &kp F6                         &kp F7                           &kp F8                       &kp F9                                   &kp F10
-&kp EQUAL   &kp N1                         &kp N2                     &kp N3                         &kp N4                       &kp N5                                                                                                                       &kp N6  &kp N7                         &kp N8                           &kp N9                       &kp N0                                   &kp MINUS
-&kp TAB     &kp Q                          &kp W                      &kp E                          &kp R                        &hm SPACE T                                                                                                                  &kp Y   &kp U                          &kp I                            &kp O                        &kp P                                    &kp BSLH
-&kp ESC     &hrm_left_hand LEFT_CONTROL A  &hrm_left_hand LEFT_ALT S  &hrm_left_hand LEFT_COMMAND D  &hrm_left_hand LEFT_SHIFT F  &hm ENTER G                                                                                                                  &kp H   &hrm_right_hand RIGHT_SHIFT J  &hrm_right_hand RIGHT_COMMAND K  &hrm_right_hand RIGHT_ALT L  &hrm_right_hand RIGHT_CONTROL SEMICOLON  &kp SQT
-&kp GRAVE   &kp Z                          &kp X                      &kp C                          &kp V                        &kp B        &hm_capsword LSHIFT 0  &kp LEFT_COMMAND  &layer_td  &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &hm_capsword RSHFT 0  &kp N   &kp M                          &kp COMMA                        &kp DOT                      &kp FSLH                                 &kp PG_UP
-&magic 4 0  &kp HOME                       &kp END                    &kp LEFT                       &kp RIGHT                                 &kp BSPC               &kp DELETE        &kp LALT   &kp RALT           &kp RET            &hm_space 2 SPACE             &kp UP                         &kp DOWN                         &kp LBKT                     &kp RBKT                                 &kp PG_DN
+&kp F1        &kp F2                         &kp F3                     &kp F4                         &kp F5                                                                                                                                                            &kp F6                         &kp F7                           &kp F8                       &kp F9                                   &kp F10
+&kp EQUAL     &kp N1                         &kp N2                     &kp N3                         &kp N4                       &kp N5                                                                                                                       &kp N6  &kp N7                         &kp N8                           &kp N9                       &kp N0                                   &kp MINUS
+&kp TAB       &kp Q                          &kp W                      &kp E                          &kp R                        &hm SPACE T                                                                                                                  &kp Y   &kp U                          &kp I                            &kp O                        &kp P                                    &kp BSLH
+&lt 2 ESCAPE  &hrm_left_hand LEFT_CONTROL A  &hrm_left_hand LEFT_ALT S  &hrm_left_hand LEFT_COMMAND D  &hrm_left_hand LEFT_SHIFT F  &hm ENTER G                                                                                                                  &kp H   &hrm_right_hand RIGHT_SHIFT J  &hrm_right_hand RIGHT_COMMAND K  &hrm_right_hand RIGHT_ALT L  &hrm_right_hand RIGHT_CONTROL SEMICOLON  &kp SQT
+&kp GRAVE     &kp Z                          &kp X                      &kp C                          &kp V                        &kp B        &hm_capsword LSHIFT 0  &kp LEFT_COMMAND  &layer_td  &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &hm_capsword RSHFT 0  &kp N   &kp M                          &kp COMMA                        &kp DOT                      &kp FSLH                                 &kp PG_UP
+&magic 5 0    &kp HOME                       &kp END                    &kp LEFT                       &kp RIGHT                                 &kp BSPC               &kp DELETE        &kp LALT   &kp RALT           &kp RET            &hm_space 3 SPACE             &kp UP                         &kp DOWN                         &kp LBKT                     &kp RBKT                                 &kp PG_DN
             >;
         };
 
@@ -201,7 +201,18 @@
             >;
         };
 
-        SYMBOL {
+        navigation_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                                                                    &trans    &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans            &trans    &trans  &trans     &trans  &trans
+            >;
+        };
+
+        symbol_layer {
             bindings = <
 &none             &none              &none                 &none                  &none                                                                                    &none          &none        &none       &none      &none
 &kp GRAVE         &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COMMA   &kp PERIOD                                                        &none      &none          &none        &none       &none      &none
@@ -212,7 +223,7 @@
             >;
         };
 
-        GAMING_LAYER {
+        gaming_layer {
             bindings = <
 &kp ESCAPE  &kp P             &kp O         &kp N         &kp BACKSPACE                                                                                                   &kp F1     &kp F2            &kp F3             &kp F4         &kp F5
 &kp M       &kp NUMBER_6      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9   &kp NUMBER_0                                                                             &kp F6  &kp F7     &kp F8            &kp F9             &kp F10        &kp F11
